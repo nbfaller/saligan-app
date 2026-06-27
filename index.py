@@ -8,6 +8,7 @@ from urllib.parse import urlparse, parse_qs
 
 # App modules
 from app import app
+import apps.commonmodules as cm
 
 # Layout definition
 CONTENT_STYLE = {
@@ -34,7 +35,7 @@ app.layout = html.Div(
         # User role session storage
         dcc.Store(id = 'current_user_role', data = -1, storage_type = 'session'),
 
-        #cm.navbar
+        cm.navbar,
         html.Div(id = 'page_content', style = CONTENT_STYLE)
         #cm.footer
     ]
@@ -77,5 +78,5 @@ def display_page(pathname, session_logout, user_id, user_role, search):
 
 if __name__ == '__main__':
     # Open the app in a web browser
-    webbrowser.open_new('http://127.0.0.1:8050/', new = 0, autoraise = True)
-    app.run_server(debug = False)
+    webbrowser.open('http://127.0.0.1:8050/', new = 0, autoraise = True)
+    app.run(debug = False)

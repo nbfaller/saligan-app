@@ -6,7 +6,7 @@ import logging
 # Create the app object (stored in app variable) along with the external stylesheets
 app = dash.Dash(
     __name__,
-    asset_folder = 'static',
+    assets_folder = 'static',
     assets_url_path = 'static',
     include_assets_files = True,
     external_stylesheets = [
