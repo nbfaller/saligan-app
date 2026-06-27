@@ -10,7 +10,7 @@ app = dash.Dash(
     assets_url_path = 'static',
     include_assets_files = True,
     external_stylesheets = [
-        "static/bootstrap.css",
+        "static/bootstrap-5.3.8-dist/css/bootstrap.css",
         #"static/dcc.css",
         dbc.themes.BOOTSTRAP,
         dbc.icons.BOOTSTRAP,
